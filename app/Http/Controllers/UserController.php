@@ -9,13 +9,9 @@ use Illuminate\Http\Request;
 class UserController extends Controller
 {
 
-    //user_idに紐付いたArticleを取ってくる。
-
-    public function showUserAllArticle($id)
+    public function articlesByUser($id)
     {
         $posts = User::find($id)->posts;
-
-        //createdat見せない
 
         $filtered = $posts->map(function ($item) {
 
@@ -26,14 +22,11 @@ class UserController extends Controller
             return $item;
         });
 
-
-
         return response()->json($filtered);
 
     }
 
 
-    //articleをとってきて、それ
 
 
     public function index()

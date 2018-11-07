@@ -25,12 +25,18 @@ $router->get('/product/page/{id}','ProductController@pageShow');
 
 //Article
 $router->get('/articles', 'ArticleController@index');
-$router->get('/articles/{id}','UserController@showUserAllArticle');
 $router->post('/article','ArticleController@create');
 $router->get('/article/{id}','ArticleController@show');
 $router->put('/article/{id}', 'ArticleController@update');
 $router->delete('/article/{id}','ArticleController@destroy');
 $router->get('/article/page/{id}','ArticleController@pageShow');
+
+//assignment2
+$router->get('/articles/user/{id}','UserController@articlesByUser');
+
+//assignment3
+$router->get('/articles/user/{id}','ArticleController@userFromArticle');
+
 
 
 //User
@@ -40,4 +46,6 @@ $router->get('/user/{id}','UserController@show');
 $router->put('/user/{id}', 'UserController@update');
 $router->delete('/user/{id}','UserController@destroy');
 $router->get('/user/page/{id}','UserController@pageShow');
+
+
 

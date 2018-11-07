@@ -7,7 +7,6 @@ class Article extends Model {
 
     protected $table = 'articles';
 
-
     protected $fillable = [];
 
 //    protected $hidden = ['created_at'];
@@ -20,6 +19,15 @@ class Article extends Model {
 
     // Relationships
 
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    Public function user()
+    {
+
+        return $this->belongsTo(User::class);
+
+    }
 
 
 }

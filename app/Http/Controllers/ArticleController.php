@@ -2,6 +2,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Article;
+
 use Illuminate\Http\Request;
 
 
@@ -75,6 +76,16 @@ class ArticleController extends Controller
 
     }
 
+    public function userFromArticle($id){
+
+        $user = Article::find($id)->user;
+
+        \Log::debug(response()->json($user));
+
+        return response()->json($user);
+
+
+    }
 
 
 }
