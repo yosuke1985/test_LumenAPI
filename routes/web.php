@@ -35,7 +35,7 @@ $router->get('/article/page/{id}','ArticleController@pageShow');
 $router->get('/articles/user/{id}','UserController@articlesByUser');
 
 //assignment3
-$router->get('/articles/user/{id}','ArticleController@userFromArticle');
+$router->get('/article/user/{id}','ArticleController@userFromArticle');
 
 
 

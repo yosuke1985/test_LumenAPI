@@ -87,5 +87,8 @@ class ArticleController extends Controller
 
     }
 
+    //status code 404
+
+
 
 }
